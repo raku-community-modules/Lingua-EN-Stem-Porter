@@ -1,9 +1,11 @@
 use v6;
+
+#TODO: Add optimizations mentioned in the original paper
 unit module Lingua::EN::Stem::Porter;
 
 my regex c {                  # A consonant
     [
-    || <-[aeiou]>             # not any of "aeiou"
+    || <-[aeiou]>             # not any of "aeiou" and
     || <?after <[aeiou]>> y   # "y" only if preceded by "aeiou"
     || << y                   # or if at the start of a word
     ]
@@ -15,7 +17,7 @@ my regex V { <v>+ } # Vowel cluster
 
 my regex v {                  # A vowel
     [
-    || <[aeiou]>              # "aeiou"
+    || <[aeiou]>              # "aeiou" and
     || [<!after <[aeiou]>> y] # "y" if not preceded by a "aeiou"
     ]
 }
@@ -57,7 +59,7 @@ my %step2hash = ("ational"  => "ate",
                  "ator"     => "ate",
                  "alism"    => "al",
                  "iveness"  => "ive",
-                 "fullness" => "ful",
+                 "fulness" => "ful",
                  "ousness"  => "ous",
                  "aliti"    => "al",
                  "iviti"    => "ive",
@@ -79,7 +81,7 @@ sub porter (
 
     if $word.chars > 2 {
         # Step 1a
-        if $word ~~ /[(ss|i)es||(<-[s]>)s]$/ {
+        if $word ~~ /[(ss||i)es||(<-[s]>)s]$/ {
             $word = $/.prematch ~ $0;
         }
 
@@ -88,11 +90,11 @@ sub porter (
             if $/.prematch ~~ /<mgt0>/ {
                 $word .= chop;
             }
-        } elsif $word ~~ /(ed|ing)$/ {
+        } elsif $word ~~ /(ed||ing)$/ {
             my $stem = $/.prematch;
             if $stem ~~ /<v>/ {
                 $word = $stem;
-                if    $word ~~ /[at|bl|iz]$/           { $word ~= "e"; }
+                if    $word ~~ /[at||bl||iz]$/           { $word ~= "e"; }
                 elsif $word ~~ /(<-[aeiouylsz]>)$0$/   { $word .= chop; }
                 elsif $word ~~ /^<C><v><-[aeiouwxy]>$/ { $word ~= "e"; }
             }
