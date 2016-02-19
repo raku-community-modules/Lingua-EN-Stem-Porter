@@ -10,9 +10,13 @@ my IO::Path $data-path = 't/data'.IO;
 # http://snowball.tartarus.org/algorithms/porter/stemmer.html but have been modified slightly.
 my @wordlist-input =     $data-path.child("wordlist-input.txt").open.lines;
 my @wordlist-expected =  $data-path.child("wordlist-expected.txt").open.lines;
-my %word-table = @wordlist-input Z=> @wordlist-expected;
 
-for %word-table.kv -> $word, $expected-stem {
-    my $stem = porter($word);
+my ($stem, $word, $expected-stem);
+for ^@wordlist-input -> $i {
+    $word = @wordlist-input[$i];
+    $expected-stem = @wordlist-expected[$i];
+    $stem = porter($word);
     is $stem, $expected-stem, "The stem of $word, $stem, should be $expected-stem";
 }
+
+done-testing;
