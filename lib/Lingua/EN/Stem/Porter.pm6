@@ -1,6 +1,5 @@
 use v6;
 
-#TODO: Add optimizations mentioned in the original paper
 unit module Lingua::EN::Stem::Porter;
 
 my regex c {                  # A consonant
