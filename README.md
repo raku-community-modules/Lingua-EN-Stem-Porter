@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/johnspurr/Lingua-EN-Stem-Porter.svg?branch=master)](https://travis-ci.org/johnspurr/Lingua-EN-Stem-Porter)
 
 # Lingua-EN-Stem-Porter
-Perl 6 implementation of the Porter stemming algorithm. This is not yet optimized and is only a basic implementation of the algorithm.
+Perl 6 implementation of the Porter stemming algorithm.
 
 **Usage**
 
