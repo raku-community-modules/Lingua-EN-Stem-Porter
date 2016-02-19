@@ -71,7 +71,7 @@ my %step3hash = ('icate' => 'ic',
                  'iciti' => 'ic',
                  'ical'  => 'ic',
                  'ful'   => '',
-                 'ness'  => '',);
+                 'ness'  => '');
 
 #| This subroutine uses the Porter stemming algorithm to stem a given word
 sub porter (
@@ -146,7 +146,7 @@ sub porter (
         if $word ~~ /e$/ {
             my $stem = $/.prematch;
             if ($stem ~~ /<mgt1>/)
-            || (($stem ~~ /<meq1>/) && not $stem ~~ /^<C><v><-[aeiouwxy]>$/) {
+            || ($stem ~~ /<meq1>/ && not $stem ~~ /^<C><v><-[aeiouwxy]>$/) {
                 $word = $stem;
             }
         }
