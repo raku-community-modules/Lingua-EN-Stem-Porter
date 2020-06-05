@@ -10,6 +10,6 @@
     },
     "license": "MIT",
     "support" : { "source" : "https://github.com/raku-community-modules/lingua-en-stem-porter.git" },
-    "source-url": "https://github.com/raku-community-modules/lingua-en-stem-porter.git",	:
+    "source-url": "https://github.com/raku-community-modules/lingua-en-stem-porter.git",
     "tags" : ["NLP", "raku", "stem", "porter"]
 }
