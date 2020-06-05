@@ -1,5 +1,5 @@
 {
-    "perl" : "6.*",
+    "perl" : "6.c",
     "name" : "Lingua::EN::Stem::Porter",
     "version" : "v1.0",
     "description" : "Implementation of the Porter stemming algorithm",
@@ -8,7 +8,7 @@
     "provides" : {
         "Lingua::EN::Stem::Porter" : "lib/Lingua/EN/Stem/Porter.pm6"
     },
-    "license": "The MIT License (MIT)",
-    "support" : { "source" : "https://github.com/johnspurr/Lingua-EN-Stem-Porter.git" },
-    "tags" : ["NLP", "perl6", "stem", "porter"]
+    "license": "MIT",
+    "support" : { "source" : "https://github.com/raku-community-modules/lingua-en-stem-porter.git" },
+    "tags" : ["NLP", "raku", "stem", "porter"]
 }
