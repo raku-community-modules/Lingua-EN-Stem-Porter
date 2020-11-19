@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/raku-community-modules/lingua-en-stem-porter.svg?branch=master)](https://travis-ci.com/raku-community-modules/lingua-en-stem-porter)
 
-# Lingua-EN-Stem-Porter
+# Lingua::EN::Stem::Porter
 
 Raku implementation of the Porter stemming algorithm.
 
