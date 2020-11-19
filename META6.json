@@ -9,7 +9,7 @@
         "Lingua::EN::Stem::Porter" : "lib/Lingua/EN/Stem/Porter.pm6"
     },
     "license": "MIT",
-    "support" : { "source" : "https://github.com/raku-community-modules/lingua-en-stem-porter.git" },
-    "source-url": "https://github.com/raku-community-modules/lingua-en-stem-porter.git",
+    "support" : { "source" : "https://github.com/raku-community-modules/Lingua-EN-Stem-Porter.git" },
+    "source-url": "https://github.com/raku-community-modules/Lingua-EN-Stem-Porter.git",
     "tags" : ["NLP", "raku", "stem", "porter"]
 }
