@@ -1,20 +1,5 @@
 [![Actions Status](https://github.com/raku-community-modules/Lingua-EN-Stem-Porter/actions/workflows/test.yml/badge.svg)](https://github.com/raku-community-modules/Lingua-EN-Stem-Porter/actions)
 
-### sub porter
-
-```raku
-sub porter(
-    Str:D $word is copy
-) returns Str:D
-```
-
-This subroutine uses the Porter stemming algorithm to stem a given word
-
-class Mu $
-----------
-
-The word to be stemmed
-
 NAME
 ====
 
@@ -32,7 +17,7 @@ say porter("establishment");  # establish
 DESCRIPTION
 ===========
 
-Lingua::EN::Stem::Porter implements the Porter stemming algorithm by exporting a single subroutone `porter` which takes an English word and returns the stem given by the Porter algorithm.
+Lingua::EN::Stem::Porter implements the Porter stemming algorithm by exporting a single subroutine `porter` which takes an English word and returns the stem given by the Porter algorithm.
 
 AUTHOR
 ======

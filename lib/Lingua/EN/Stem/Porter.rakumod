@@ -73,9 +73,9 @@ my constant %step3hash =
   ness  => '',
 ;
 
-#| This subroutine uses the Porter stemming algorithm to stem a given word
+# This subroutine uses the Porter stemming algorithm to stem a given word
 sub porter(
-  Str:D $word is copy #= The word to be stemmed
+  Str:D $word is copy # The word to be stemmed
 --> Str:D) is export {
 
     if $word.chars > 2 {
@@ -180,7 +180,7 @@ say porter("establishment");  # establish
 =head1 DESCRIPTION
 
 Lingua::EN::Stem::Porter implements the Porter stemming algorithm by
-exporting a single subroutone C<porter> which takes an English word and
+exporting a single subroutine C<porter> which takes an English word and
 returns the stem given by the Porter algorithm.
 
 =head1 AUTHOR
