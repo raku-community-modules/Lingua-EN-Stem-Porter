@@ -1,4 +1,3 @@
-use lib 'lib';
 use Test;
 use Lingua::EN::Stem::Porter;
 
@@ -19,4 +18,4 @@ for ^@wordlist-input -> $i {
     is $stem, $expected-stem, "The stem of $word, $stem, should be $expected-stem";
 }
 
-done-testing;
+# vim: expandtab shiftwidth=4
